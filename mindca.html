@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindCare AI: Student Wellness Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        :root {
+            --color-primary: #FF6B6B;
+            --color-secondary: #FFD166;
+            --color-tertiary: #06D6A0;
+            --color-info: #118AB2;
+            --color-text: #073B4C;
+        }
+    </style>
+</head>
+<body class="bg-gray-50" style="color: var(--color-text);">
+
+    <div class="container mx-auto p-4 sm:p-8 max-w-7xl">
+
+        <header class="text-center my-8 md:my-12">
+            <h1 class="text-4xl md:text-6xl font-extrabold" style="color: var(--color-info);">MindCare AI</h1>
+            <p class="text-xl md:text-2xl mt-4 font-semibold">A New Vision for Holistic Student Wellness</p>
+        </header>
+
+        <section id="crisis" class="mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4" style="color: var(--color-primary);">An Urgent, Unseen Crisis</h2>
+            <p class="text-lg text-center max-w-4xl mx-auto mb-8">The mental health landscape for students is at a breaking point. The data reveals a silent epidemic of anxiety, depression, and burnout, driven by immense academic and social pressure. Existing solutions are fragmented, failing to connect the critical dots between mental and physical well-being.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center mb-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-5xl font-extrabold" style="color: var(--color-primary);">13,000+</div>
+                    <div class="text-lg font-semibold mt-2">Student Suicides in 2022</div>
+                    <p class="text-sm">This marks a staggering 65% rise over the past decade.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-5xl font-extrabold" style="color: var(--color-primary);">1 every 40</div>
+                    <div class="text-lg font-semibold mt-2">Minutes</div>
+                    <p class="text-sm">A student suicide occurs at this devastating frequency.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-5xl font-extrabold" style="color: var(--color-primary);">7.6%</div>
+                    <div class="text-lg font-semibold mt-2">Of All Suicides</div>
+                    <p class="text-sm">Are students, highlighting a uniquely vulnerable population.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-center mb-4">Pervasive Anxiety</h3>
+                    <div class="chart-container w-full max-w-md mx-auto h-72 max-h-72">
+                        <canvas id="anxietyChart"></canvas>
+                    </div>
+                    <p class="text-center mt-4 text-lg">A nationwide survey revealed that nearly **70% of students** experience moderate to high levels of anxiety, fueled by academic pressure and career uncertainty.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-center mb-4">Signs of Depression</h3>
+                    <div class="chart-container w-full max-w-md mx-auto h-72 max-h-72">
+                        <canvas id="depressionChart"></canvas>
+                    </div>
+                    <p class="text-center mt-4 text-lg">The same study found that **60% of students** show clear signs of depression, with many suffering in silence due to social stigma.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="solution" class="my-12 md:my-20">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4" style="color: var(--color-tertiary);">The MindCare AI Solution: A Unified Platform</h2>
+            <p class="text-lg text-center max-w-4xl mx-auto mb-8">MindCare AI is not just another app. It's an integrated ecosystem designed to proactively manage wellness by connecting the three pillars of health: mental state, burnout, and nutrition. We use on-device AI to provide private, personalized insights and interventions.</p>
+        </section>
+
+        <section id="burnout" class="my-12 md:my-20">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Pillar 1: Proactive Burnout Detection</h2>
+            <p class="text-lg text-center max-w-4xl mx-auto mb-8">Burnout is more than just feeling tired; it's a syndrome of exhaustion, cynicism, and reduced performance. Our AI models analyze passive data to detect it early, before it becomes a crisis.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-center mb-4">AI-Identified Risk Factors</h3>
+                    <div class="chart-container w-full max-w-lg mx-auto h-96 max-h-96">
+                        <canvas id="burnoutFactorsChart"></canvas>
+                    </div>
+                    <p class="text-center mt-4 text-lg">Our system learns an individual's baseline by monitoring key behavioral metrics. It flags deviations in **sleep, screen time, study duration, and mood log sentiment** to predict burnout risk.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-center mb-4">Proven Model Accuracy</h3>
+                    <div class="chart-container w-full max-w-lg mx-auto h-96 max-h-96">
+                        <canvas id="accuracyChart"></canvas>
+                    </div>
+                    <p class="text-center mt-4 text-lg">Research-backed models form our foundation. AI achieves high accuracy in identifying burnout from **textual data (NLP)** and **behavioral patterns (ML)**, ensuring reliable insights.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="nutrition" class="my-12 md:my-20">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Pillar 2: Effortless Nutrition Tracking</h2>
+            <p class="text-lg text-center max-w-4xl mx-auto mb-8">Good nutrition is the foundation of mental health, but manual logging is tedious. We use cutting-edge computer vision to make tracking as simple as taking a photo, eliminating the #1 barrier to healthy eating.</p>
+            
+            <div class="bg-white p-6 md:p-10 rounded-lg shadow-md">
+                <h3 class="text-2xl font-bold text-center mb-6">How AI Food Recognition Works</h3>
+                <div class="flex flex-col md:flex-row items-center justify-around space-y-4 md:space-y-0 md:space-x-4">
+                    
+                    <div class="text-center flex flex-col items-center p-4">
+                        <div class="text-6xl mb-2">📸</div>
+                        <div class="text-lg font-semibold" style="color: var(--color-info);">1. Snap a Photo</div>
+                        <p>User captures an image of their meal.</p>
+                    </div>
+
+                    <div class="text-4xl font-bold hidden md:block" style="color: var(--color-tertiary);">→</div>
+                    <div class="text-4xl font-bold md:hidden" style="color: var(--color-tertiary);">↓</div>
+
+                    <div class="text-center flex flex-col items-center p-4">
+                        <div class="text-6xl mb-2">🤖</div>
+                        <div class="text-lg font-semibold" style="color: var(--color-info);">2. AI Identification</div>
+                        <p>On-device models (YOLOv8, MobileNetV2) detect food items.</p>
+                    </div>
+
+                    <div class="text-4xl font-bold hidden md:block" style="color: var(--color-tertiary);">→</div>
+                    <div class="text-4xl font-bold md:hidden" style="color: var(--color-tertiary);">↓</div>
+
+                    <div class="text-center flex flex-col items-center p-4">
+                        <div class="text-6xl mb-2">📚</div>
+                        <div class="text-lg font-semibold" style="color: var(--color-info);">3. Database Match</div>
+                        <p>Items are matched against nutrition databases (e.g., Edamam).</p>
+                    </div>
+
+                    <div class="text-4xl font-bold hidden md:block" style="color: var(--color-tertiary);">→</div>
+                    <div class="text-4xl font-bold md:hidden" style="color: var(--color-tertiary);">↓</div>
+
+                    <div class="text-center flex flex-col items-center p-4">
+                        <div class="text-6xl mb-2">📊</div>
+                        <div class="text-lg font-semibold" style="color: var(--color-info);">4. Instant Breakdown</div>
+                        <p>User gets a full report of calories, macros, and nutrients.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="index" class="my-12 md:my-20">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">The Core Engine: The Wellness Index</h2>
+            <p class="text-lg text-center max-w-4xl mx-auto mb-8">This is where it all comes together. The Wellness Index is a single, easy-to-understand score (0-100) that provides a holistic view of a user's health by intelligently weighting the three pillars.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-center">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-center mb-4">Composition of the Index</h3>
+                    <div class="chart-container w-full max-w-lg mx-auto h-96 max-h-96">
+                        <canvas id="wellnessIndexChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold mb-4">The Formula for Health</h3>
+                    <p class="text-lg mb-4">The index is a weighted sum, prioritizing mental state while acknowledging the critical support of physical health and rest.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="p-4 rounded-lg" style="background-color: #ff6b6b30;">
+                            <div class="text-xl font-bold" style="color: var(--color-primary);">40% Mental Score</div>
+                            <p>Derived from mood logs, journal sentiment, and chatbot interactions.</p>
+                        </div>
+                        <div class="p-4 rounded-lg" style="background-color: #06d6a030;">
+                            <div class="text-xl font-bold" style="color: var(--color-tertiary);">30% Physical Score</div>
+                            <p>Based on nutrition balance, exercise frequency, and sleep quality.</p>
+                        </div>
+                        <div class="p-4 rounded-lg" style="background-color: #ffd16630;">
+                            <div class="text-xl font-bold" style="color: var(--color-secondary);">30% Burnout Score</div>
+                            <p>Calculated from sleep, screen time, and study duration data (inverted).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center my-12 md:my-20">
+            <p class="text-xl font-semibold" style="color: var(--color-info);">Privacy-First. AI-Powered. Holistic Wellness.</p>
+            <p class="text-lg mt-2">MindCare AI provides the early interventions and integrated insights that students need to thrive.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const colors = {
+                primary: '#FF6B6B',
+                secondary: '#FFD166',
+                tertiary: '#06D6A0',
+                info: '#118AB2',
+                text: '#073B4C',
+                gray: '#e5e7eb'
+            };
+
+            function wrapText(label) {
+                const limit = 16;
+                if (label.length <= limit) {
+                    return label;
+                }
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                for (const word of words) {
+                    if ((currentLine + word).length <= limit) {
+                        currentLine += word + ' ';
+                    } else {
+                        lines.push(currentLine.trim());
+                        currentLine = word + ' ';
+                    }
+                }
+                lines.push(currentLine.trim());
+                return lines;
+            }
+            
+            function tooltipTitleCallback(tooltipItems) {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                    return label.join(' ');
+                } else {
+                    return label;
+                }
+            }
+            
+            const defaultOptions = {
+                maintainAspectRatio: false,
+                responsive: true,
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: colors.text
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            };
+            
+            const doughnutOptions = {
+                ...defaultOptions,
+                rotation: -90,
+                circumference: 180,
+                cutout: '70%',
+                plugins: {
+                    ...defaultOptions.plugins,
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        ...defaultOptions.plugins.tooltip,
+                        filter: (item) => item.dataIndex === 0
+                    }
+                }
+            };
+
+            const anxietyCtx = document.getElementById('anxietyChart');
+            if (anxietyCtx) {
+                new Chart(anxietyCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['High Anxiety', 'Other'],
+                        datasets: [{
+                            data: [70, 30],
+                            backgroundColor: [colors.primary, colors.gray],
+                            borderColor: ['#ffffff'],
+                            borderWidth: 4
+                        }]
+                    },
+                    options: doughnutOptions
+                });
+            }
+
+            const depressionCtx = document.getElementById('depressionChart');
+            if (depressionCtx) {
+                new Chart(depressionCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Signs of Depression', 'Other'],
+                        datasets: [{
+                            data: [60, 40],
+                            backgroundColor: [colors.info, colors.gray],
+                            borderColor: ['#ffffff'],
+                            borderWidth: 4
+                        }]
+                    },
+                    options: doughnutOptions
+                });
+            }
+
+            const burnoutFactorsCtx = document.getElementById('burnoutFactorsChart');
+            if (burnoutFactorsCtx) {
+                new Chart(burnoutFactorsCtx, {
+                    type: 'radar',
+                    data: {
+                        labels: [
+                            wrapText('Low Sleep Hours'), 
+                            wrapText('High Screen Time'), 
+                            wrapText('High Study Duration'), 
+                            wrapText('Negative Mood Logs'), 
+                            wrapText('Distress Sentiment')
+                        ],
+                        datasets: [{
+                            label: 'Burnout Risk Factors',
+                            data: [8, 9, 7, 8, 6],
+                            fill: true,
+                            backgroundColor: 'rgba(255, 107, 107, 0.2)',
+                            borderColor: colors.primary,
+                            pointBackgroundColor: colors.primary,
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: colors.primary
+                        }]
+                    },
+                    options: {
+                        ...defaultOptions,
+                        scales: {
+                            r: {
+                                angleLines: { color: colors.gray },
+                                grid: { color: colors.gray },
+                                pointLabels: {
+                                    color: colors.text,
+                                    font: { size: 12 }
+                                },
+                                ticks: {
+                                    backdropColor: 'transparent',
+                                    color: colors.text,
+                                    stepSize: 2
+                                },
+                                suggestedMin: 0,
+                                suggestedMax: 10
+                            }
+                        }
+                    }
+                });
+            }
+
+            const accuracyCtx = document.getElementById('accuracyChart');
+            if (accuracyCtx) {
+                new Chart(accuracyCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: [wrapText('NLP (Text Analysis)'), wrapText('ML (Behavioral Data)')],
+                        datasets: [{
+                            label: 'Model Accuracy',
+                            data: [93, 97.3],
+                            backgroundColor: [colors.tertiary, colors.info],
+                            borderRadius: 6
+                        }]
+                    },
+                    options: {
+                        ...defaultOptions,
+                        indexAxis: 'y',
+                        scales: {
+                            x: {
+                                beginAtZero: true,
+                                max: 100,
+                                grid: { color: colors.gray },
+                                ticks: { color: colors.text, callback: (value) => value + '%' }
+                            },
+                            y: {
+                                grid: { display: false },
+                                ticks: { color: colors.text, font: { size: 14 } }
+                            }
+                        },
+                        plugins: {
+                            ...defaultOptions.plugins,
+                            legend: {
+                                display: false
+                            }
+                        }
+                    }
+                });
+            }
+            
+            const wellnessIndexCtx = document.getElementById('wellnessIndexChart');
+            if (wellnessIndexCtx) {
+                new Chart(wellnessIndexCtx, {
+                    type: 'pie',
+                    data: {
+                        labels: [
+                            wrapText('Mental Score (40%)'), 
+                            wrapText('Physical Score (30%)'), 
+                            wrapText('Burnout Score (30%)')
+                        ],
+                        datasets: [{
+                            data: [40, 30, 30],
+                            backgroundColor: [
+                                colors.primary,
+                                colors.tertiary,
+                                colors.secondary
+                            ],
+                            borderColor: '#ffffff',
+                            borderWidth: 4
+                        }]
+                    },
+                    options: {
+                        ...defaultOptions,
+                        plugins: {
+                            ...defaultOptions.plugins,
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    font: { size: 14 }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

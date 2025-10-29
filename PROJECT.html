@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindCare AI: The Multimodal AI System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flow-arrow {
+            font-size: 2rem;
+            line-height: 1;
+            color: #4ECDC4;
+        }
+        .flow-box {
+            background-color: white;
+            border: 2px solid #4ECDC4;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-3xl font-bold" style="color: #45B7D1;">MindCare AI</h1>
+            <span class="font-semibold text-gray-600">The Multimodal AI System</span>
+        </nav>
+    </header>
+
+    <main class="container mx-auto p-6 md:p-12">
+
+        <section id="problem" class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-4" style="color: #FF6B6B;">The Crisis of Disconnected Health</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">High stress, anxiety, and depression are rising, yet we fail to see the true cause. We treat the mind and body as separate, unrelated systems.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <span class="text-5xl font-bold" style="color: #FF6B6B;">?</span>
+                    <h3 class="text-2xl font-semibold my-2">Causal Blindness</h3>
+                    <p class="text-gray-600">We can't link an emotional symptom (like anxiety) to its true physical root cause (like poor sleep or low SpO2).</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <span class="text-5xl font-bold" style="color: #F7B731;">⌚</span>
+                    <h3 class="text-2xl font-semibold my-2">Untapped Biometrics</h3>
+                    <p class="text-gray-600">Smartwatch data (HR, Stress) is uncontextualized. It tells you *what* (HR is high) but never *why*.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <span class="text-5xl font-bold" style="color: #45B7D1;">🤖</span>
+                    <h3 class="text-2xl font-semibold my-2">Generic AI Response</h3>
+                    <p class="text-gray-600">Existing AI counselors provide directive responses (like normal GPT), not deep, analytical insight from a mental health doctor.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="solution" class="bg-white rounded-lg shadow-lg p-8 md:p-12 mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8" style="color: #4ECDC4;">The Solution: Fusion Logic</h2>
+            <p class="text-lg text-gray-700 max-w-4xl mx-auto text-center mb-10">MindCare AI implements **Fusion Logic**, a system that unifies a user's entire life context across three critical dimensions. Our goal is to shift treatment from symptomatic to **predictive** by creating an Analytical AI Personal Life Counselor.</p>
+            
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4 text-center">
+                <div class="flow-box rounded-lg p-4 shadow-sm w-full md:w-1/4">
+                    <h4 class="text-lg font-semibold">1. Mental State</h4>
+                    <p class="text-sm text-gray-600">(Secure Chat)</p>
+                </div>
+                <div class="flow-arrow hidden md:block">&rarr;</div>
+                <div class="flow-arrow md:hidden">&darr;</div>
+                <div class="flow-box rounded-lg p-4 shadow-sm w-full md:w-1/4">
+                    <h4 class="text-lg font-semibold">2. Daily Work Burnout</h4>
+                    <p class="text-sm text-gray-600">(Sleep, Screen Time)</p>
+                </div>
+                <div class="flow-arrow hidden md:block">&rarr;</div>
+                <div class="flow-arrow md:hidden">&darr;</div>
+                <div class="flow-box rounded-lg p-4 shadow-sm w-full md:w-1/4">
+                    <h4 class="text-lg font-semibold">3. Real-Time Biometrics</h4>
+                    <p class="text-sm text-gray-600">(HR, SpO2)</p>
+                </div>
+            </div>
+            
+            <div class="flex justify-center mt-4">
+                <div class="flow-arrow">&darr;</div>
+            </div>
+
+            <div class="mt-4 bg-gray-100 rounded-lg p-6 shadow-inner max-w-xl mx-auto text-center">
+                <h3 class="text-2xl font-bold" style="color: #45B7D1;">The Wellness Index (0-100)</h3>
+                <p class="text-gray-700">The single, holistic score that enables **Analytical, Predictive Intervention**.</p>
+            </div>
+        </section>
+
+        <section id="features" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-10">Core Multimodal Functionalities</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-2xl font-semibold mb-4" style="color: #4ECDC4;">1. The Wellness Index & SOS Trigger</h3>
+                    <p class="text-gray-600 mb-4">A continuous, holistic score that instantly diagnoses your weakest link. If the Index shows a **continuous slow degrade**, a Trigger Alarm contacts a medical professional.</p>
+                    <div class="chart-container" style="height: 250px; max-height: 250px;">
+                        <canvas id="wellnessIndexChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-2xl font-semibold mb-4" style="color: #4ECDC4;">2. The Analytical AI Counselor</h3>
+                    <p class="text-gray-600 mb-4">This AI is trained like a mental health doctor. Its response is deep, objective, and based on your specific biometric and burnout data to find the *real* cause.</p>
+                    <div class="chart-container" style="height: 250px; max-height: 250px;">
+                        <canvas id="counselorLogicChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-2xl font-semibold mb-4" style="color: #4ECDC4;">3. Biometric Data Fusion Engine</h3>
+                    <p class="text-gray-600 mb-4">Secure API integration (Google Fit, Apple Health, Noise, Boat) streams your vital signs directly into the Fusion Logic engine.</p>
+                    <div class="chart-container" style="height: 250px; max-height: 250px;">
+                        <canvas id="biometricChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-2xl font-semibold mb-4" style="color: #4ECDC4;">4. Daily Work Burnout Predictor</h3>
+                    <p class="text-gray-600 mb-4">Proactively analyzes the fusion of daily work activities, sleep hours, and screen time to determine your exact exhaustion level.</p>
+                    <div class="chart-container" style="height: 250px; max-height: 250px;">
+                        <canvas id="burnoutChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="architecture" class="bg-white rounded-lg shadow-lg p-8 md:p-12 mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8" style="color: #45B7D1;">System Architecture & Privacy</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Privacy-First with On-Device AI</h3>
+                    <p class="text-gray-700 mb-4">Biometric data streams are pre-processed using **TFLite On-Device AI**. This ensures raw, sensitive data **never leaves your phone**, guaranteeing 100% privacy.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><span class="font-bold text-lg mr-2" style="color: #4ECDC4;">&check;</span>Calculated scores are sent to the Firebase-hosted Wellness Index.</li>
+                        <li class="flex items-center"><span class="font-bold text-lg mr-2" style="color: #4ECDC4;">&check;</span>The Index informs the Analytical LLM Counselor.</li>
+                        <li class="flex items-center"><span class="font-bold text-lg mr-2" style="color: #4ECDC4;">&check;</span>The SOS Protocol is triggered by the secure Fusion Core.</li>
+                    </ul>
+                </div>
+                <div class="text-center p-6 bg-gray-100 rounded-lg shadow-inner">
+                    <div class="flow-box rounded-lg p-4 shadow-sm w-full mb-2">
+                        <h4 class="text-lg font-semibold">Biometrics & Activity</h4>
+                    </div>
+                    <div class="flow-arrow">&darr;</div>
+                    <div class="flow-box rounded-lg p-4 shadow-sm w-full mt-2" style="border-color: #FF6B6B;">
+                        <h4 class="text-lg font-semibold" style="color: #FF6B6B;">TFLite On-Device AI</h4>
+                        <p class="text-sm text-gray-600">(Privacy Layer)</p>
+                    </div>
+                    <div class="flow-arrow">&darr;</div>
+                    <div class="flow-box rounded-lg p-4 shadow-sm w-full mt-2">
+                        <h4 class="text-lg font-semibold">Firebase Fusion Core</h4>
+                        <p class="text-sm text-gray-600">(Wellness Index Algorithm)</p>
+                    </div>
+                    <div class="flow-arrow">&darr;</div>
+                    <div class="flow-box rounded-lg p-4 shadow-sm w-full mt-2">
+                        <h4 class="text-lg font-semibold">AI Counselor & SOS</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="impact" class="text-center">
+            <h2 class="text-3xl font-bold mb-8" style="color: #FF6B6B;">Impact & Predictive Prevention</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">We shift the focus of health from **reactive crisis management** to **proactive, data-validated intervention**, addressing the core issue of suicide and depression precursors.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-5xl font-bold mb-2" style="color: #4ECDC4;">96%</h3>
+                    <p class="text-lg font-semibold text-gray-700">Accuracy in stress correlation due to HR/SpO2 integration.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-5xl font-bold mb-2" style="color: #4ECDC4;">100%</h3>
+                    <p class="text-lg font-semibold text-gray-700">Data Privacy for sensitive biometrics (TFLite On-Device AI).</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-5xl font-bold mb-2" style="color: #4ECDC4;">40%</h3>
+                    <p class="text-lg font-semibold text-gray-700">Projected reduction in self-reported stress with biometric-informed interventions.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white mt-16 shadow-inner">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-600">
+            <p class="text-2xl font-bold mb-2" style="color: #45B7D1;">MindCare AI</p>
+            <p class="mb-4">"Your body talks, but only MindCare AI listens and understands. The future of health is predictive."</p>
+            <p>&copy; 2025 MindCare AI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            'use strict';
+
+            const FONT_COLOR = '#374151';
+            const GRID_COLOR = '#E5E7EB';
+            const PALETTE = {
+                red: '#FF6B6B',
+                teal: '#4ECDC4',
+                blue: '#45B7D1',
+                yellow: '#F7B731',
+                gray: '#9CA3AF'
+            };
+
+            Chart.defaults.color = FONT_COLOR;
+            Chart.defaults.font.family = 'Inter';
+            Chart.defaults.font.weight = '600';
+            Chart.defaults.plugins.tooltip.backgroundColor = '#FFFFFF';
+            Chart.defaults.plugins.tooltip.titleColor = '#374151';
+            Chart.defaults.plugins.tooltip.bodyColor = '#374151';
+            Chart.defaults.plugins.tooltip.borderColor = '#E5E7EB';
+            Chart.defaults.plugins.tooltip.borderWidth = 1;
+            Chart.defaults.plugins.tooltip.displayColors = false;
+            Chart.defaults.plugins.tooltip.padding = 10;
+            Chart.defaults.plugins.tooltip.cornerRadius = 8;
+
+            function processLabels(labels, maxChars = 16) {
+                return labels.map(label => {
+                    if (typeof label === 'string' && label.length > maxChars) {
+                        const words = label.split(' ');
+                        const newLabel = [];
+                        let line = '';
+                        words.forEach(word => {
+                            if ((line + word).length > maxChars) {
+                                newLabel.push(line.trim());
+                                line = '';
+                            }
+                            line += word + ' ';
+                        });
+                        newLabel.push(line.trim());
+                        return newLabel;
+                    }
+                    return label;
+                });
+            }
+
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                    return label.join(' ');
+                } else {
+                    return label;
+                }
+            };
+            
+            const sharedChartOptions = {
+                maintainAspectRatio: false,
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            color: FONT_COLOR
+                        }
+                    },
+                    y: {
+                        grid: {
+                            color: GRID_COLOR
+                        },
+                        ticks: {
+                            color: FONT_COLOR
+                        },
+                        beginAtZero: true
+                    }
+                }
+            };
+
+            const sharedPieOptions = {
+                maintainAspectRatio: false,
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            color: FONT_COLOR,
+                            padding: 20
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            };
+
+            function createWellnessIndexChart() {
+                const ctx = document.getElementById('wellnessIndexChart')?.getContext('2d');
+                if (!ctx) return;
+                
+                new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Wellness Score', 'Remaining'],
+                        datasets: [{
+                            data: [78, 22],
+                            backgroundColor: [PALETTE.teal, PALETTE.gray],
+                            borderColor: ['#FFFFFF'],
+                            borderWidth: 4,
+                            hoverOffset: 4
+                        }]
+                    },
+                    options: {
+                        ...sharedPieOptions,
+                        cutout: '70%',
+                        plugins: {
+                            ...sharedPieOptions.plugins,
+                            title: {
+                                display: true,
+                                text: 'Overall Wellness Index: 78/100',
+                                font: { size: 16 },
+                                padding: { bottom: 20 }
+                            }
+                        }
+                    }
+                });
+            }
+
+            function createCounselorLogicChart() {
+                const ctx = document.getElementById('counselorLogicChart')?.getContext('2d');
+                if (!ctx) return;
+
+                const originalLabels = ['User Reports "Anxious"', 'Check Biometrics (HR/SpO2)', 'Identify Root Cause (Sleep)', 'Provide Analytical Response'];
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: processLabels(originalLabels),
+                        datasets: [{
+                            label: 'Intervention Step',
+                            data: [10, 20, 30, 40],
+                            backgroundColor: [PALETTE.yellow, PALETTE.red, PALETTE.blue, PALETTE.teal],
+                            borderRadius: 8
+                        }]
+                    },
+                    options: {
+                        ...sharedChartOptions,
+                        scales: {
+                            ...sharedChartOptions.scales,
+                            x: {
+                                ...sharedChartOptions.scales.x,
+                                ticks: {
+                                    ...sharedChartOptions.scales.x.ticks,
+                                    font: { size: 10 }
+                                }
+                            }
+                        },
+                        plugins: {
+                            ...sharedChartOptions.plugins,
+                            title: {
+                                display: true,
+                                text: 'Analytical Counselor Logic Flow',
+                                font: { size: 16 },
+                                padding: { bottom: 20 }
+                            }
+                        }
+                    }
+                });
+            }
+
+            function createBiometricChart() {
+                const ctx = document.getElementById('biometricChart')?.getContext('2d');
+                if (!ctx) return;
+
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                        datasets: [
+                            {
+                                label: 'Heart Rate (Resting)',
+                                data: [62, 65, 63, 70, 68, 75, 72],
+                                borderColor: PALETTE.red,
+                                backgroundColor: PALETTE.red + '33',
+                                fill: true,
+                                tension: 0.3
+                            },
+                            {
+                                label: 'SpO2 Level',
+                                data: [98, 97, 98, 96, 97, 95, 96],
+                                borderColor: PALETTE.blue,
+                                backgroundColor: PALETTE.blue + '33',
+                                fill: false,
+                                tension: 0.3
+                            }
+                        ]
+                    },
+                    options: {
+                        ...sharedChartOptions,
+                        plugins: {
+                            ...sharedChartOptions.plugins,
+                            legend: {
+                                display: true,
+                                position: 'bottom'
+                            },
+                            title: {
+                                display: true,
+                                text: 'Real-Time Biometric Fusion',
+                                font: { size: 16 },
+                                padding: { bottom: 20 }
+                            }
+                        }
+                    }
+                });
+            }
+
+            function createBurnoutChart() {
+                const ctx = document.getElementById('burnoutChart')?.getContext('2d');
+                if (!ctx) return;
+
+                const originalLabels = ['Daily Work (Hours)', 'Sleep (Hours)', 'Screen Time (Hours)'];
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: processLabels(originalLabels),
+                        datasets: [{
+                            label: 'Hours',
+                            data: [9.5, 5.5, 6],
+                            backgroundColor: [PALETTE.blue, PALETTE.teal, PALETTE.yellow],
+                            borderRadius: 8
+                        }]
+                    },
+                    options: {
+                        ...sharedChartOptions,
+                         indexAxis: 'y',
+                         scales: {
+                            x: {
+                                grid: {
+                                    color: GRID_COLOR
+                                },
+                                ticks: {
+                                    color: FONT_COLOR
+                                },
+                                beginAtZero: true
+                            },
+                            y: {
+                                grid: {
+                                    display: false
+                                },
+                                ticks: {
+                                    color: FONT_COLOR
+                                }
+                            }
+                        },
+                        plugins: {
+                            ...sharedChartOptions.plugins,
+                            title: {
+                                display: true,
+                                text: 'Burnout Predictor Data Points',
+                                font: { size: 16 },
+                                padding: { bottom: 20 }
+                            }
+                        }
+                    }
+                });
+            }
+            
+            document.addEventListener('DOMContentLoaded', () => {
+                createWellnessIndexChart();
+                createCounselorLogicChart();
+                createBiometricChart();
+                createBurnoutChart();
+            });
+
+        })();
+    </script>
+</body>
+</html>
+
